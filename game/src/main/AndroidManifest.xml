@@ -57,8 +57,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ProductCheckActivity"
-            android:label="@string/title_activity_product_check"
+            android:name=".ConnectActivity"
+            android:label="@string/title_activity_connect"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
@@ -72,10 +72,7 @@
                     android:scheme="https" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ConnectActivity"
-            android:label="@string/title_activity_connect"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".ProductCheckActivity">
             <intent-filter android:order="1">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -83,7 +80,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="example.com"
+                    android:host="productCheck.com"
                     android:pathPattern="/.*"
                     android:scheme="https" />
             </intent-filter>
