@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.manuelc.nbo_gamification.game">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application>
         <activity
             android:name=".GameList"
