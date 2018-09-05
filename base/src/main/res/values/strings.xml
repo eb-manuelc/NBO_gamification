@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">NBO-gamification</string>
+    <string name="title_activity_whos_this">WhosThisActivity</string>
+    <string name="title_activity_find_it">FindItActivity</string>
+    <string name="title_activity_product_check">ProductCheckActivity</string>
+    <string name="title_activity_connect">ConnectActivity</string>
 </resources>

@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.content.Intent;
 
 public class GameList extends AppCompatActivity {
 
@@ -18,14 +19,29 @@ public class GameList extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+    }
+
+    public void rowClick(View view){
+        if (view.getId() == R.id.whosthis) {
+            Intent i = new Intent(GameList.this, WhosThisActivity.class);
+            i.putExtra("key", "bla");
+            startActivity(i);
+        }
+        else if (view.getId() == R.id.findit) {
+            Intent i = new Intent(GameList.this, FindItActivity.class);
+            i.putExtra("key", "bla");
+            startActivity(i);
+        }
+        else if (view.getId() == R.id.connect) {
+            Intent i = new Intent(GameList.this, ConnectActivity.class);
+            i.putExtra("key", "bla");
+            startActivity(i);
+        }
+        else if (view.getId() == R.id.productcheck) {
+            Intent i = new Intent(GameList.this, ProductCheckActivity.class);
+            i.putExtra("key", "bla");
+            startActivity(i);
+        }
     }
 
     @Override
