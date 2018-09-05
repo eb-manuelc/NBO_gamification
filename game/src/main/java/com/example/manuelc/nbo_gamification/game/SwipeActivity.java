@@ -1,4 +1,4 @@
-package com.example.manuelc.nbo_gamification.app;
+package com.example.manuelc.nbo_gamification.game;
 
 import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
@@ -20,7 +20,10 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-public class SwipeActivity extends AppCompatActivity {
+public class SwipeActivity extends AppCompatActivity  implements
+        WhosThisOne.OnFragmentInteractionListener,
+        WhosThisTwo.OnFragmentInteractionListener,
+        WhosThisTree.OnFragmentInteractionListener{
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -86,6 +89,11 @@ public class SwipeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
+    }
+
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -115,8 +123,6 @@ public class SwipeActivity extends AppCompatActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_swipe, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
     }

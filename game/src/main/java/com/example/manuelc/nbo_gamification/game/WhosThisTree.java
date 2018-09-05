@@ -1,4 +1,4 @@
-package com.example.manuelc.nbo_gamification.app;
+package com.example.manuelc.nbo_gamification.game;
 
 import android.content.Context;
 import android.net.Uri;
