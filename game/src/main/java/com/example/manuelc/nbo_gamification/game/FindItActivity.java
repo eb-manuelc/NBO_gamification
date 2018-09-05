@@ -52,8 +52,14 @@ public class FindItActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_find_it);
+        setContentView(R.layout.activity_find_it);
         cameraView = findViewById(R.id.camera_view);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
         initQR();
     }
 
