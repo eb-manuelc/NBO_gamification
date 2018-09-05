@@ -1,5 +1,6 @@
 package com.example.manuelc.nbo_gamification.game;
 
+import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -18,7 +19,11 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-public class WhosThisActivity extends AppCompatActivity {
+
+public class SwipeActivity extends AppCompatActivity  implements
+        WhosThisOne.OnFragmentInteractionListener,
+        WhosThisTwo.OnFragmentInteractionListener,
+        WhosThisTree.OnFragmentInteractionListener{
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -38,7 +43,7 @@ public class WhosThisActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_whos_this);
+        setContentView(R.layout.activity_swipe);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -65,7 +70,7 @@ public class WhosThisActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_whos_this, menu);
+        getMenuInflater().inflate(R.menu.menu_swipe, menu);
         return true;
     }
 
@@ -82,6 +87,11 @@ public class WhosThisActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 
     /**
@@ -112,9 +122,7 @@ public class WhosThisActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_whos_this, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            View rootView = inflater.inflate(R.layout.fragment_swipe, container, false);
             return rootView;
         }
     }
@@ -133,7 +141,17 @@ public class WhosThisActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            switch (position) {
+                case 0:
+                    return new WhosThisOne();
+                case 1:
+                    return new WhosThisTwo();
+                case 2:
+                    return new WhosThisTree();
+                default:
+                    return PlaceholderFragment.newInstance(position + 1);
+            }
+
         }
 
         @Override
@@ -142,4 +160,5 @@ public class WhosThisActivity extends AppCompatActivity {
             return 3;
         }
     }
+
 }

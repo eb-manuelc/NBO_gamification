@@ -23,7 +23,7 @@ public class GameList extends AppCompatActivity {
 
     public void rowClick(View view){
         if (view.getId() == R.id.whosthis) {
-            Intent i = new Intent(GameList.this, WhosThisActivity.class);
+            Intent i = new Intent(GameList.this, SwipeActivity.class);
             i.putExtra("key", "bla");
             startActivity(i);
         }
