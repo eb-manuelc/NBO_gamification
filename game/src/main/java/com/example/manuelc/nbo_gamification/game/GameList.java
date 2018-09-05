@@ -19,49 +19,29 @@ public class GameList extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-    }
-
-    public void rowClick(View view){
-        if (view.getId() == R.id.whosthis) {
-            Intent i = new Intent(GameList.this, SwipeActivity.class);
-            i.putExtra("key", "bla");
-            startActivity(i);
-        }
-        else if (view.getId() == R.id.findit) {
-            Intent i = new Intent(GameList.this, FindItActivity.class);
-            i.putExtra("key", "bla");
-            startActivity(i);
-        }
-        else if (view.getId() == R.id.connect) {
+        findViewById(R.id.connect).setOnClickListener(v -> {
             Intent i = new Intent(GameList.this, ConnectActivity.class);
             i.putExtra("key", "bla");
             startActivity(i);
-        }
-        else if (view.getId() == R.id.productcheck) {
+        });
+
+        findViewById(R.id.findit).setOnClickListener(v -> {
+            Intent i = new Intent(GameList.this, FindItActivity.class);
+            i.putExtra("key", "bla");
+            startActivity(i);
+        });
+
+        findViewById(R.id.whosThis).setOnClickListener(v -> {
+            Intent i = new Intent(GameList.this, SwipeActivity.class);
+            i.putExtra("key", "bla");
+            startActivity(i);
+        });
+
+        findViewById(R.id.productCheck).setOnClickListener(v -> {
             Intent i = new Intent(GameList.this, ProductCheckActivity.class);
             i.putExtra("key", "bla");
             startActivity(i);
-        }
-    }
+        });
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_game_list, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }
