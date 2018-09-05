@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class ConnectActivity extends AppCompatActivity {
@@ -103,9 +104,24 @@ public class ConnectActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_connect, container, false);
+            final View rootView = inflater.inflate(R.layout.fragment_connect, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+
+            rootView.findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String answer = ((EditText) rootView.findViewById(R.id.editText)).getText().toString();
+                    if (answer ==("Paula 123"))
+                    {
+                        Log.d("myTag", "This is my message");
+                    });
+                }
+            });
+         }
+            });
+
+
             return rootView;
         }
     }
