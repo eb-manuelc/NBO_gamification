@@ -16,7 +16,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class TriviaActivity extends AppCompatActivity {
 
@@ -51,11 +53,26 @@ public class TriviaActivity extends AppCompatActivity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+        Button botonIncorrecto1 = (Button) findViewById(R.id.radioButton7);
+        botonIncorrecto1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText( getApplicationContext(),"Ups! Need to practice a little bit more!",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        Button bottonCorrecto = (Button) findViewById(R.id.radioButton8);
+        bottonCorrecto.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText( getApplicationContext(),"Correct!!  1 Point! ",Toast.LENGTH_LONG).show();
+                finish();
+            }
+        });
+
+        Button botonIncorrecto2 = (Button) findViewById(R.id.radioButton11);
+        botonIncorrecto2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText( getApplicationContext(),"Ups! Need to practice a little bit more!",Toast.LENGTH_LONG).show();
             }
         });
 
