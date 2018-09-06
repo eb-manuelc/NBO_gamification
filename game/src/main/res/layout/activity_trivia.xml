@@ -78,14 +78,13 @@
             android:textSize="24sp" />
 
         <RadioGroup
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="160dp"
-            android:layout_marginRight="60dp"
+            android:layout_gravity="center_horizontal"
             android:textAlignment="center">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="135dp"
                 android:orientation="vertical">
 
