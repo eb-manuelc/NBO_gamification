@@ -45,7 +45,7 @@
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="fill_parent"
-            android:layout_height="164dp"
+            android:layout_height="150dp"
             android:scaleType="centerCrop"
 
             app:srcCompat="@drawable/trivia_image" />
@@ -58,8 +58,10 @@
             android:layout_alignParentTop="true"
             android:layout_gravity="center_horizontal"
             android:text="Trivia"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="50dp"
+            android:textSize="36sp"
             app:layout_anchor="@+id/container"
             app:layout_anchorGravity="top|center" />
 
@@ -67,16 +69,20 @@
             android:id="@+id/question"
             android:layout_width="match_parent"
             android:layout_height="83dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:layout_gravity="center_horizontal"
-            android:text="when did Eventbrite adquire Eventioz?..."
+            android:layout_margin="20dp"
+            android:text="When did Eventbrite adquire Eventioz?"
             android:textAlignment="center"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textColor="#2d3033"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="24sp" />
 
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_marginLeft="160dp"
+            android:layout_marginRight="60dp"
+            android:textAlignment="center">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -87,19 +93,25 @@
                     android:id="@+id/radioButton7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="2012" />
+                    android:text="2012"
+                    android:textColor='#2d3033'
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/radioButton8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="2014" />
+                    android:text="2014"
+                    android:textColor='#2d3033'
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/radioButton11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="2016" />
+                    android:text="2016"
+                    android:textColor='#2d3033'
+                    android:textSize="20sp" />
 
             </LinearLayout>
         </RadioGroup>

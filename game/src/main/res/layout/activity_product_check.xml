@@ -33,6 +33,7 @@ tools:context=".ProductCheckActivity">
             android:layout_marginBottom="20dp"
             android:text="Create a new Event and set it to private that requires a password to view the event page."
             android:textAlignment="center"
+            android:textColor="#2d3033"
             android:textSize="20sp" />
 
 
