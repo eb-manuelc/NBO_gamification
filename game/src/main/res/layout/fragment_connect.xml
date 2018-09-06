@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:text="You may need to save days for vacations. Who is the person in charge of it?"
             android:textAlignment="center"
+            android:textColor="#2d3033"
             android:textSize="24sp"
             android:layout_marginBottom="20dp"
             android:layout_marginStart="10dp"
