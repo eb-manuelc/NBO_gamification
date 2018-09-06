@@ -69,14 +69,14 @@ public class WhosThisTwo extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_whos_this_two, container, false);
 
-        Button botonIncorrecto1 = (Button) view.findViewById(R.id.radioButton7);
+        Button botonIncorrecto1 = (Button) view.findViewById(R.id.radioButton8);
         botonIncorrecto1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText( getActivity().getApplicationContext(),"Oops! Try again!",Toast.LENGTH_LONG).show();
             }
         });
 
-        Button bottonCorrecto = (Button) view.findViewById(R.id.radioButton8);
+        Button bottonCorrecto = (Button) view.findViewById(R.id.radioButton7);
         bottonCorrecto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText( getActivity().getApplicationContext(),"Correct!!  1 Point! ",Toast.LENGTH_LONG).show();

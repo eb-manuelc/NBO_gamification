@@ -69,17 +69,17 @@ public class WhosThisTree extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_whos_this_tree, container, false);
 
-        Button botonIncorrecto1 = (Button) view.findViewById(R.id.radioButton8);
+        Button botonIncorrecto1 = (Button) view.findViewById(R.id.radioButton7);
         botonIncorrecto1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText( getActivity().getApplicationContext(),"Oops! Try again!",Toast.LENGTH_LONG).show();
             }
         });
 
-        Button bottonCorrecto = (Button) view.findViewById(R.id.radioButton7);
+        Button bottonCorrecto = (Button) view.findViewById(R.id.radioButton8);
         bottonCorrecto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText( getActivity().getApplicationContext(),"Correct!!  1 Point! ",Toast.LENGTH_LONG).show();
+                Toast.makeText( getActivity().getApplicationContext(),"Correct!!  1 Point! You ended this game!",Toast.LENGTH_LONG).show();
                 getActivity().finish();
             }
         });
