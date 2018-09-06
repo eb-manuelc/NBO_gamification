@@ -82,7 +82,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="productCheck.com"
+                    android:host="productcheck.com"
                     android:pathPattern="/.*"
                     android:scheme="https" />
             </intent-filter>
