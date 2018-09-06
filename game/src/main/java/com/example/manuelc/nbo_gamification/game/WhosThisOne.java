@@ -84,9 +84,7 @@ public class WhosThisOne extends Fragment {
             public void onClick(View v) {
                 Toast.makeText( getActivity().getApplicationContext(),"Correct!!  1 Point! ",Toast.LENGTH_SHORT).show();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                //transaction.replace(fragment_whos_this_one, new WhosThisTwo());
-                //transaction.remove(getParentFragment());
-                transaction.attach(new WhosThisTree());
+                transaction.replace( getId(), new WhosThisTwo());
                 transaction.commitNow();
             }
         });
