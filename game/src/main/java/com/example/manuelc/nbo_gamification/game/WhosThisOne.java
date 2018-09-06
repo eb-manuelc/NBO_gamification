@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,7 @@ public class WhosThisOne extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private int fragment_whos_this_one;
 
     public WhosThisOne() {
         // Required empty public constructor
@@ -73,21 +75,23 @@ public class WhosThisOne extends Fragment {
         Button botonIncorrecto1 = (Button) view.findViewById(R.id.radioButton7);
         botonIncorrecto1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText( getActivity().getApplicationContext(),"Oops! Try again!",Toast.LENGTH_LONG).show();
+                Toast.makeText( getActivity().getApplicationContext(),"Oops! Try again!",Toast.LENGTH_SHORT).show();
             }
         });
 
         Button bottonCorrecto = (Button) view.findViewById(R.id.radioButton11);
         bottonCorrecto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText( getActivity().getApplicationContext(),"Correct!!  1 Point! ",Toast.LENGTH_LONG).show();
+                Toast.makeText( getActivity().getApplicationContext(),"Correct!!  1 Point! ",Toast.LENGTH_SHORT).show();
+                SwipeActivity parentActivity =(SwipeActivity) getActivity();
+                parentActivity.changeFragment();
             }
         });
 
         Button botonIncorrecto2 = (Button) view.findViewById(R.id.radioButton8);
         botonIncorrecto2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText( getActivity().getApplicationContext(),"Oops! Try again!!",Toast.LENGTH_LONG).show();
+                Toast.makeText( getActivity().getApplicationContext(),"Oops! Try again!!",Toast.LENGTH_SHORT).show();
             }
         });
         // Inflate the layout for this fragment
