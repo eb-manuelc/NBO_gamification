@@ -114,7 +114,10 @@ public class ConnectActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     String answer = ((EditText) rootView.findViewById(R.id.editText)).getText().toString();
                     if(answer.equals("Paula123")){
-                        Toast.makeText( getContext(),"Correct! +5 points!!  ",Toast.LENGTH_LONG).show();
+                        Toast.makeText( getContext(),"Correct! 1 point!!  ",Toast.LENGTH_LONG).show();
+                        getActivity().finish();
+                    } else {
+                        Toast.makeText( getContext(),"Are you sure you talked to the right person?",Toast.LENGTH_LONG).show();
                     }
                 }
             });
