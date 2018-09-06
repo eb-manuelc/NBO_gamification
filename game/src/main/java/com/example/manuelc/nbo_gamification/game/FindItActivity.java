@@ -3,6 +3,7 @@ package com.example.manuelc.nbo_gamification.game;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.hardware.Camera;
 import android.net.Uri;
 import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
@@ -35,7 +36,9 @@ import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
 
+
 import java.io.IOException;
+import java.security.Policy;
 
 public class FindItActivity extends AppCompatActivity {
 
@@ -59,11 +62,8 @@ public class FindItActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
         initQR();
     }
-
-
 
     public void initQR(){
 
@@ -74,16 +74,16 @@ public class FindItActivity extends AppCompatActivity {
 
         //Crear la camara fuente - Camera Source permite obtener frames de la camara del dispositivo y posteriormente analizarlo
         cameraSource = new CameraSource.Builder(getApplicationContext(), barcodeDetector)
-                .setRequestedPreviewSize(640, 480)
+                .setRequestedPreviewSize(700, 500)
                 .setAutoFocusEnabled(true)
                 .build();
+
 
         //Listener del ciclo de vida de la camara
         this.cameraView.getHolder().addCallback(new SurfaceHolder.Callback() {
             @Override
             public void surfaceCreated(SurfaceHolder holder) {
                 //Verificar si el usuario dio permisos para la camara
-
                 if(ActivityCompat.checkSelfPermission(FindItActivity.this, Manifest.permission.CAMERA)
                         != PackageManager.PERMISSION_GRANTED){
                     if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
@@ -94,6 +94,7 @@ public class FindItActivity extends AppCompatActivity {
                     return;
                 }else{
                     try{
+                        cameraView.setRotation(180);
                         cameraSource.start(cameraView.getHolder());
                     }catch (IOException ie){
                         Log.e("CAMERA SOURCE", ie.getMessage());
@@ -130,15 +131,27 @@ public class FindItActivity extends AppCompatActivity {
                         tokenanterior = token;
                         Log.i("Token", token);
 
-                        if(URLUtil.isValidUrl(token)){
-                            //Si es una URL valida abre el navegador
-                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(token));
-                            startActivity(browserIntent);
+
+
+                       if(token.equals("lollapalooza")){
+                           runOnUiThread(new Runnable() {
+                               @Override
+                               public void run() {
+                                   Toast.makeText( getApplicationContext(),"Correct! +5 points!!  ",Toast.LENGTH_LONG).show();
+                                   finish();
+                               }
+                           });
+
+
+                        //if(URLUtil.isValidUrl(token)){
+                           //Si es una URL valida abre el navegador
+                          //  Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(token));
+                          //  startActivity(browserIntent);
                         }else{
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    Toast.makeText(getApplicationContext(),token,Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(),"Ups, Not lollapalooza. Try again.",Toast.LENGTH_LONG).show();
                                 }
                             });
                         }
