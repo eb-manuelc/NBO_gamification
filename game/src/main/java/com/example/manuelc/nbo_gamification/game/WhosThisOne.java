@@ -83,9 +83,8 @@ public class WhosThisOne extends Fragment {
         bottonCorrecto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText( getActivity().getApplicationContext(),"Correct!!  1 Point! ",Toast.LENGTH_SHORT).show();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace( getId(), new WhosThisTwo());
-                transaction.commitNow();
+                SwipeActivity parentActivity =(SwipeActivity) getActivity();
+                parentActivity.changeFragment();
             }
         });
 

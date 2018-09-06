@@ -3,6 +3,7 @@ package com.example.manuelc.nbo_gamification.game;
 import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -18,6 +19,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+
+import java.util.Iterator;
+import java.util.List;
 
 
 public class SwipeActivity extends AppCompatActivity  implements
@@ -64,6 +68,11 @@ public class SwipeActivity extends AppCompatActivity  implements
             }
         });
 
+    }
+
+    public void changeFragment() {
+
+        mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1,true);
     }
 
 
