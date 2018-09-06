@@ -72,14 +72,14 @@ public class WhosThisTree extends Fragment {
         Button botonIncorrecto1 = (Button) view.findViewById(R.id.radioButton7);
         botonIncorrecto1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText( getActivity().getApplicationContext(),"Oops! Try again!",Toast.LENGTH_LONG).show();
+                Toast.makeText( getActivity().getApplicationContext(),"Oops! Try again!",Toast.LENGTH_SHORT).show();
             }
         });
 
         Button bottonCorrecto = (Button) view.findViewById(R.id.radioButton8);
         bottonCorrecto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText( getActivity().getApplicationContext(),"Correct!!  1 Point! You ended this game!",Toast.LENGTH_LONG).show();
+                Toast.makeText( getActivity().getApplicationContext(),"Correct!!  1 Point! You ended this game!",Toast.LENGTH_SHORT).show();
                 getActivity().finish();
             }
         });
@@ -87,7 +87,7 @@ public class WhosThisTree extends Fragment {
         Button botonIncorrecto2 = (Button) view.findViewById(R.id.radioButton11);
         botonIncorrecto2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText( getActivity().getApplicationContext(),"Oops! Try again!!",Toast.LENGTH_LONG).show();
+                Toast.makeText( getActivity().getApplicationContext(),"Oops! Try again!!",Toast.LENGTH_SHORT).show();
             }
         });
         // Inflate the layout for this fragment
