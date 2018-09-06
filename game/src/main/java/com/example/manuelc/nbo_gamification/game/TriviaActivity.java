@@ -57,7 +57,7 @@ public class TriviaActivity extends AppCompatActivity {
         Button botonIncorrecto1 = (Button) findViewById(R.id.radioButton7);
         botonIncorrecto1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText( getApplicationContext(),"Ups! Need to practice a little bit more!",Toast.LENGTH_LONG).show();
+                Toast.makeText( getApplicationContext(),"Oops! Need to practice a little bit more!",Toast.LENGTH_LONG).show();
             }
         });
 
@@ -72,7 +72,7 @@ public class TriviaActivity extends AppCompatActivity {
         Button botonIncorrecto2 = (Button) findViewById(R.id.radioButton11);
         botonIncorrecto2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText( getApplicationContext(),"Ups! Need to practice a little bit more!",Toast.LENGTH_LONG).show();
+                Toast.makeText( getApplicationContext(),"Oops! Need to practice a little bit more!",Toast.LENGTH_LONG).show();
             }
         });
 
