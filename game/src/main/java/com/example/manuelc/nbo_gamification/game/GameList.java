@@ -38,5 +38,12 @@ public class GameList extends AppCompatActivity {
             startActivity(i);
         });
 
+        findViewById(R.id.trivia).setOnClickListener(v -> {
+            Intent i = new Intent(GameList.this, TriviaActivity.class);
+            i.putExtra("key", "bla");
+            startActivity(i);
+        });
     }
 }
+
+//
