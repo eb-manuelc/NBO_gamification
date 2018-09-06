@@ -65,6 +65,7 @@ public class TriviaActivity extends AppCompatActivity {
         bottonCorrecto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText( getApplicationContext(),"Correct!!  1 Point! ",Toast.LENGTH_LONG).show();
+                Score.score += 1;
                 finish();
             }
         });

@@ -30,6 +30,7 @@ public class ProductCheckActivity extends AppCompatActivity {
                 System.out.println(input.getText().toString());
                 if (input.getText().toString().equalsIgnoreCase("1234")) {
                     Toast.makeText( getApplicationContext(),"Correct!!  1 Point! ",Toast.LENGTH_LONG).show();
+                    Score.score += 1;
                     finish();
                 } else {
                     Toast.makeText( getApplicationContext(),"Are you sure this is the correct event?",Toast.LENGTH_LONG).show();

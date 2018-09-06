@@ -138,6 +138,7 @@ public class FindItActivity extends AppCompatActivity {
                                @Override
                                public void run() {
                                    Toast.makeText( getApplicationContext(),"Correct! +5 points!!  ",Toast.LENGTH_LONG).show();
+                                   Score.score += 1;
                                    finish();
                                }
                            });

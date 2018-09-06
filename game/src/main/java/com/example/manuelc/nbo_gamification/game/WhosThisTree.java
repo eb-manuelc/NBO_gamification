@@ -80,6 +80,7 @@ public class WhosThisTree extends Fragment {
         bottonCorrecto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText( getActivity().getApplicationContext(),"Correct!!  1 Point! You ended this game!",Toast.LENGTH_SHORT).show();
+                Score.score += 1;
                 getActivity().finish();
             }
         });

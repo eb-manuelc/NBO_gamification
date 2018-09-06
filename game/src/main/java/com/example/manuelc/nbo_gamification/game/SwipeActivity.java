@@ -71,7 +71,7 @@ public class SwipeActivity extends AppCompatActivity  implements
     }
 
     public void changeFragment() {
-
+        Score.score += 1;
         mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1,true);
     }
 
