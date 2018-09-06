@@ -4,6 +4,8 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
@@ -139,6 +141,9 @@ public class FindItActivity extends AppCompatActivity {
                                public void run() {
                                    Toast.makeText( getApplicationContext(),"Correct! +5 points!!  ",Toast.LENGTH_LONG).show();
                                    Score.score += 1;
+                                   Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                                   Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+                                   r.play();
                                    finish();
                                }
                            });

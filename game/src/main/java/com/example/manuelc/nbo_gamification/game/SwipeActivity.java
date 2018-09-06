@@ -1,5 +1,7 @@
 package com.example.manuelc.nbo_gamification.game;
 
+import android.media.Ringtone;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -72,6 +74,9 @@ public class SwipeActivity extends AppCompatActivity  implements
 
     public void changeFragment() {
         Score.score += 1;
+        Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+        r.play();
         mViewPager.setCurrentItem(mViewPager.getCurrentItem() + 1,true);
     }
 

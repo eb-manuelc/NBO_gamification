@@ -1,6 +1,8 @@
 package com.example.manuelc.nbo_gamification.game;
 
 import android.content.Context;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -81,6 +83,9 @@ public class WhosThisTree extends Fragment {
             public void onClick(View v) {
                 Toast.makeText( getActivity().getApplicationContext(),"Correct!!  1 Point! You ended this game!",Toast.LENGTH_SHORT).show();
                 Score.score += 1;
+                Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                Ringtone r = RingtoneManager.getRingtone(getContext(), notification);
+                r.play();
                 getActivity().finish();
             }
         });
