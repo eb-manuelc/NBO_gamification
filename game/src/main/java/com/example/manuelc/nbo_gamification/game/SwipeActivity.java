@@ -59,7 +59,7 @@ public class SwipeActivity extends AppCompatActivity  implements
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Are you sure?", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

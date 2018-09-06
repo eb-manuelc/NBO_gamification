@@ -52,13 +52,13 @@
                     android:id="@+id/radioButton7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Marina Verdu" />
+                    android:text="Marina Verdú" />
 
                 <RadioButton
                     android:id="@+id/radioButton8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Karina Pangaro" />
+                    android:text="Karina Pángaro" />
 
                 <RadioButton
                     android:id="@+id/radioButton11"
