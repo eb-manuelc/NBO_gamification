@@ -17,18 +17,20 @@
 
         <SurfaceView
             android:id="@+id/camera_view"
-            android:layout_width="640px"
+            android:layout_width="match_parent"
             android:layout_height="350dp"
-            android:layout_alignParentLeft = "true"
-            android:layout_centerVertical = "true"/>
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="216dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="sans-serif"
+            android:textColor="#FFF6682F"
             android:text="Find the QR in Lollapalooza"
-            android:textSize="40sp"
             android:textAlignment="center"
-            android:textColor="@android:color/holo_orange_dark"/>
+            android:textSize="35sp" />
 
     </LinearLayout>
 
