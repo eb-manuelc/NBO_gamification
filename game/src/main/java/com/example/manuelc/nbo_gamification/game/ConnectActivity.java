@@ -112,13 +112,12 @@ public class ConnectActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     String answer = ((EditText) rootView.findViewById(R.id.editText)).getText().toString();
-                    if (answer ==("Paula 123"))
-                    {
-                        Log.d("myTag", "This is my message");
-                    });
+                    if(answer.equals("Paula 123")){
+                        Toast.makeText(this,"Correct! +5 points!!  ",Toast.LENGTH_LONG).show();
+                    }
                 }
             });
-         }
+         };
             });
 
 
