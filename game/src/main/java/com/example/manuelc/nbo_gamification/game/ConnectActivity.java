@@ -1,5 +1,8 @@
 package com.example.manuelc.nbo_gamification.game;
 
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -115,6 +118,10 @@ public class ConnectActivity extends AppCompatActivity {
                     String answer = ((EditText) rootView.findViewById(R.id.editText)).getText().toString();
                     if(answer.equals("Paula123")){
                         Toast.makeText( getContext(),"Correct! 1 point!!  ",Toast.LENGTH_LONG).show();
+                        Score.score += 1;
+                        Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                        Ringtone r = RingtoneManager.getRingtone(getContext(), notification);
+                        r.play();
                         getActivity().finish();
                     } else {
                         Toast.makeText( getContext(),"Are you sure you talked to the right person?",Toast.LENGTH_LONG).show();

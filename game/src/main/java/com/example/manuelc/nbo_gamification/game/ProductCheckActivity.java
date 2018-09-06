@@ -1,5 +1,8 @@
 package com.example.manuelc.nbo_gamification.game;
 
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.ViewPager;
@@ -30,6 +33,10 @@ public class ProductCheckActivity extends AppCompatActivity {
                 System.out.println(input.getText().toString());
                 if (input.getText().toString().equalsIgnoreCase("1234")) {
                     Toast.makeText( getApplicationContext(),"Correct!!  1 Point! ",Toast.LENGTH_LONG).show();
+                    Score.score += 1;
+                    Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                    Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+                    r.play();
                     finish();
                 } else {
                     Toast.makeText( getApplicationContext(),"Are you sure this is the correct event?",Toast.LENGTH_LONG).show();

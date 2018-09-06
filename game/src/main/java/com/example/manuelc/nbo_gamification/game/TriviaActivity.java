@@ -1,5 +1,8 @@
 package com.example.manuelc.nbo_gamification.game;
 
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -65,6 +68,10 @@ public class TriviaActivity extends AppCompatActivity {
         bottonCorrecto.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText( getApplicationContext(),"Correct!!  1 Point! ",Toast.LENGTH_LONG).show();
+                Score.score += 1;
+                Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+                Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
+                r.play();
                 finish();
             }
         });
