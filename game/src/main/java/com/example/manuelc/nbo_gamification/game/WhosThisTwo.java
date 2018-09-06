@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 /**
@@ -64,7 +66,31 @@ public class WhosThisTwo extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_whos_this_two, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_whos_this_two, container, false);
+
+        Button botonIncorrecto1 = (Button) view.findViewById(R.id.radioButton8);
+        botonIncorrecto1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText( getActivity().getApplicationContext(),"Oops! Try again!",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        Button bottonCorrecto = (Button) view.findViewById(R.id.radioButton7);
+        bottonCorrecto.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText( getActivity().getApplicationContext(),"Correct!!  1 Point! ",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        Button botonIncorrecto2 = (Button) view.findViewById(R.id.radioButton11);
+        botonIncorrecto2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText( getActivity().getApplicationContext(),"Oops! Try again!!",Toast.LENGTH_LONG).show();
+            }
+        });
+        // Inflate the layout for this fragment
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
