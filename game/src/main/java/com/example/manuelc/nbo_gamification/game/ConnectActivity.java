@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ConnectActivity extends AppCompatActivity {
 
@@ -106,20 +107,17 @@ public class ConnectActivity extends AppCompatActivity {
                                  Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.fragment_connect, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
-
+//            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             rootView.findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+
                 @Override
                 public void onClick(View v) {
                     String answer = ((EditText) rootView.findViewById(R.id.editText)).getText().toString();
-                    if(answer.equals("Paula 123")){
-                        Toast.makeText(this,"Correct! +5 points!!  ",Toast.LENGTH_LONG).show();
+                    if(answer.equals("Paula123")){
+                        Toast.makeText( getContext(),"Correct! +5 points!!  ",Toast.LENGTH_LONG).show();
                     }
                 }
             });
-         };
-            });
-
 
             return rootView;
         }
