@@ -21,52 +21,51 @@
         android:layout_width="402dp"
         android:layout_height="52dp"
         android:layout_marginTop="296dp"
+        android:fontFamily="sans-serif"
         android:text="Who's This?"
         android:textAlignment="center"
+        android:textColor="@color/colorAccent"
         android:textSize="36sp"
-        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
     <LinearLayout
         android:layout_width="368dp"
-        android:layout_height="143dp"
+        android:layout_height="140dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.585"
+        app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="8dp">
 
-        <RadioGroup
+        <RadioButton
+            android:id="@+id/radioButton7"
             android:layout_width="match_parent"
-            android:layout_height="133dp">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:fontFamily="sans-serif"
+            android:text="Marina Verdú"
+            android:textSize="20sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="135dp"
-                android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:fontFamily="sans-serif"
+            android:text="Karina Pángaro"
+            android:textSize="20sp" />
 
-                <RadioButton
-                    android:id="@+id/radioButton7"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Marina Verdú" />
-
-                <RadioButton
-                    android:id="@+id/radioButton8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Karina Pángaro" />
-
-                <RadioButton
-                    android:id="@+id/radioButton11"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Cecilia Giglio" />
-
-            </LinearLayout>
-        </RadioGroup>
+        <RadioButton
+            android:id="@+id/radioButton11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:fontFamily="sans-serif"
+            android:text="Cecilia Giglio"
+            android:textColorLink="@color/colorAccent"
+            android:textSize="20sp" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
