@@ -15,6 +15,17 @@
         android:layout_gravity="center_horizontal"
         android:padding="8dp">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif"
+            android:text="Find It"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="36sp" />
+
         <SurfaceView
             android:id="@+id/camera_view"
             android:layout_width="match_parent"
@@ -23,14 +34,17 @@
             android:layout_centerVertical="true" />
 
         <TextView
+            android:id="@+id/textView5"
             android:layout_width="match_parent"
-            android:layout_height="216dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="sans-serif"
-            android:textColor="#FFF6682F"
             android:text="Find the QR in Lollapalooza"
             android:textAlignment="center"
-            android:textSize="35sp" />
+            android:textColor="#000"
+            android:textSize="24sp" />
+
 
     </LinearLayout>
 
