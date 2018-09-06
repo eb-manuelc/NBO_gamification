@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.TextView;
 
 public class GameList extends AppCompatActivity {
 
@@ -26,13 +27,13 @@ public class GameList extends AppCompatActivity {
             startActivity(i);
         });
 
-        findViewById(R.id.whosThis).setOnClickListener(v -> {
+        findViewById(R.id.whos_this).setOnClickListener(v -> {
             Intent i = new Intent(GameList.this, SwipeActivity.class);
             i.putExtra("key", "bla");
             startActivity(i);
         });
 
-        findViewById(R.id.productCheck).setOnClickListener(v -> {
+        findViewById(R.id.product_check).setOnClickListener(v -> {
             Intent i = new Intent(GameList.this, ProductCheckActivity.class);
             i.putExtra("key", "bla");
             startActivity(i);
@@ -43,6 +44,12 @@ public class GameList extends AppCompatActivity {
             i.putExtra("key", "bla");
             startActivity(i);
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ((TextView) findViewById(R.id.score)).setText(String.valueOf(Score.score));
     }
 }
 
